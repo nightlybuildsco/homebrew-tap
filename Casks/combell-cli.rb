@@ -13,23 +13,23 @@ cask "combell-cli" do
 
   on_macos do
     on_intel do
-      url "https://github.com/nightlybuildsco/combell-cli/releases/download/v#{version}/combell-cli_#{version}_darwin_amd64.tar.gz"
-      sha256 "7c702efd738a1ff4430afd3e77d1ac3efcb275042ba29eef44995601cb8091ec"
+      url "https://github.com/nightlybuildsco/combell-cli-releases/releases/download/v#{version}/combell-cli_#{version}_darwin_amd64.tar.gz"
+      sha256 "3092b4fb37036b39eda487d0e25b4116219e3b3f727ed328642420184ca92b9e"
     end
     on_arm do
-      url "https://github.com/nightlybuildsco/combell-cli/releases/download/v#{version}/combell-cli_#{version}_darwin_arm64.tar.gz"
-      sha256 "b6916126ab234b7262193a7091665cd4236d6975b5628c8ffe122a669a01318c"
+      url "https://github.com/nightlybuildsco/combell-cli-releases/releases/download/v#{version}/combell-cli_#{version}_darwin_arm64.tar.gz"
+      sha256 "f2d230b195c9ce3f0700e7fe86221d29e9385c493c0300f79da9e85662dbe6f4"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/nightlybuildsco/combell-cli/releases/download/v#{version}/combell-cli_#{version}_linux_amd64.tar.gz"
-      sha256 "a7fb03e4112b4d9f92d840dd93831a0239eb157a5ffdda080d5196dc73cc6fa3"
+      url "https://github.com/nightlybuildsco/combell-cli-releases/releases/download/v#{version}/combell-cli_#{version}_linux_amd64.tar.gz"
+      sha256 "5d4826a2e8abfe79871c4557fe856c52dafb9e8c3291a2428b535f0ea4347260"
     end
     on_arm do
-      url "https://github.com/nightlybuildsco/combell-cli/releases/download/v#{version}/combell-cli_#{version}_linux_arm64.tar.gz"
-      sha256 "280ef700f1321ddbbc5ce6a0d466830aab4b729a0485233378f3f31b4bfe7aa6"
+      url "https://github.com/nightlybuildsco/combell-cli-releases/releases/download/v#{version}/combell-cli_#{version}_linux_arm64.tar.gz"
+      sha256 "774dc108dc8fc7f98dc817f1d946182312e306ef0c4444a8edb31b9520ea1d95"
     end
   end
 
