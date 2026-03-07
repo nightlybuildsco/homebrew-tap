@@ -11,7 +11,7 @@ class DataforseoCli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/nightlybuildsco/dataforseo-cli-releases/releases/download/v1.0.0-beta1/dataforseo-cli_1.0.0-beta1_darwin_amd64.tar.gz"
-      sha256 "654200ad25ccd0cf32d9aa3d751f033333d32458d56363d62bf3084c053fce0f"
+      sha256 "2f9bc58271a984e9aee59beb0e2b9b860642366ee8ee05403ac64f1c35ecc351"
 
       define_method(:install) do
         bin.install "dataforseo-cli"
@@ -19,7 +19,7 @@ class DataforseoCli < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/nightlybuildsco/dataforseo-cli-releases/releases/download/v1.0.0-beta1/dataforseo-cli_1.0.0-beta1_darwin_arm64.tar.gz"
-      sha256 "2d2d3c06e5e2768835c55b8f873cfb837d09fca737b787d90493db3d77532b6d"
+      sha256 "9647ccf6c6edae22f4da2ad4d7112f055eb777d868d0e90d5bbd1cfb34a684ea"
 
       define_method(:install) do
         bin.install "dataforseo-cli"
@@ -30,14 +30,14 @@ class DataforseoCli < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/nightlybuildsco/dataforseo-cli-releases/releases/download/v1.0.0-beta1/dataforseo-cli_1.0.0-beta1_linux_amd64.tar.gz"
-      sha256 "343575734757350db797a3bd328aa6845513ea73c2cf3e9e9da97368deeb20f3"
+      sha256 "6190a9377b23e1ff06d5b90ee6d5e8d1dead77a4f29ce61cb20a161872cc9041"
       define_method(:install) do
         bin.install "dataforseo-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/nightlybuildsco/dataforseo-cli-releases/releases/download/v1.0.0-beta1/dataforseo-cli_1.0.0-beta1_linux_arm64.tar.gz"
-      sha256 "d3ef1f834e302b87c067675643d761be00aac5f740d34f5795642115940df69b"
+      sha256 "13752c963eeb6ee27fa784d8a09cf679d2adcc36cd70e50a29f83f4dd93a9a0a"
       define_method(:install) do
         bin.install "dataforseo-cli"
       end
