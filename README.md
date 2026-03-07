@@ -20,7 +20,3 @@ brew install nightlybuildsco/tap/<formula>
 |---------|-------------|---------|---------|----------|
 | `combell-cli` | CLI tool for the Combell API | 1-beta1 | MIT | [Releases](https://github.com/nightlybuildsco/combell-cli-releases/releases) |
 | `dataforseo-cli` | CLI tool for the DataForSEO API | 1.0.0-beta1 | MIT | [Releases](https://github.com/nightlybuildsco/dataforseo-cli-releases/releases) |
-
----
-
-*This README is auto-generated from the formula files. Do not edit manually.*

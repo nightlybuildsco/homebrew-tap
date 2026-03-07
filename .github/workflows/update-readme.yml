@@ -15,7 +15,42 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Generate README
-        run: ./scripts/generate-readme.sh
+        run: |
+          cat > README.md << 'HEADER'
+          # Homebrew Tap
+
+          Custom [Homebrew](https://brew.sh) tap for projects maintained by [Pieter Van Leuven / nightlybuildsco](https://github.com/nightlybuildsco).
+
+          ## Installation
+
+          ```sh
+          brew tap nightlybuildsco/tap
+          ```
+
+          Then install any formula:
+
+          ```sh
+          brew install nightlybuildsco/tap/<formula>
+          ```
+
+          ## Available Projects
+
+          | Formula | Description | Version | License | Releases |
+          |---------|-------------|---------|---------|----------|
+          HEADER
+
+          # Remove leading whitespace added by YAML indentation
+          sed -i 's/^          //' README.md
+
+          for rb in *.rb; do
+            [ -f "$rb" ] || continue
+            desc=$(grep -m1 'desc ' "$rb" | sed 's/.*desc "\(.*\)"/\1/')
+            version=$(grep -m1 'version ' "$rb" | sed 's/.*version "\(.*\)"/\1/')
+            license=$(grep -m1 'license ' "$rb" | sed 's/.*license "\(.*\)"/\1/')
+            releases_url=$(grep -m1 'url "' "$rb" | sed 's|.*url "\(https://github.com/[^/]*/[^/]*\)/.*|\1|')/releases
+            formula_name="${rb%.rb}"
+            echo "| \`${formula_name}\` | ${desc} | ${version} | ${license} | [Releases](${releases_url}) |" >> README.md
+          done
 
       - name: Commit and push if changed
         run: |
