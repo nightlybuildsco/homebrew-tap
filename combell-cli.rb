@@ -5,21 +5,21 @@
 class CombellCli < Formula
   desc "CLI tool for the Combell API"
   homepage "https://github.com/nightlybuildsco/combell-cli"
-  version "1-beta1"
+  version "1.0.0-beta1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nightlybuildsco/combell-cli-releases/releases/download/v1-beta1/combell-cli_1-beta1_darwin_amd64.tar.gz"
-      sha256 "9bf6fa6173d0d6c2df06f3d5f500a41de65fd3575c4df8c2a5fdf064ca5cc0ca"
+      url "https://github.com/nightlybuildsco/combell-cli-releases/releases/download/v1.0.0-beta1/combell-cli_1.0.0-beta1_darwin_amd64.tar.gz"
+      sha256 "0b32f2ed1733df1ad375da35aba109b774482c188c12e03b6c4fb3bb6e263ecd"
 
       define_method(:install) do
         bin.install "combell-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nightlybuildsco/combell-cli-releases/releases/download/v1-beta1/combell-cli_1-beta1_darwin_arm64.tar.gz"
-      sha256 "552e1784c7d65e475936698ca43fa41951f072aa477729229259e3966137393e"
+      url "https://github.com/nightlybuildsco/combell-cli-releases/releases/download/v1.0.0-beta1/combell-cli_1.0.0-beta1_darwin_arm64.tar.gz"
+      sha256 "f523f3e7211883dcdb4359e3ace13f1bc0bdfabad66486c470d3251acdaa19eb"
 
       define_method(:install) do
         bin.install "combell-cli"
@@ -29,15 +29,15 @@ class CombellCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nightlybuildsco/combell-cli-releases/releases/download/v1-beta1/combell-cli_1-beta1_linux_amd64.tar.gz"
-      sha256 "1465606b8eb76eb5a3b1b8b63600f1e30748331b1c3c1220feb54907b222eee9"
+      url "https://github.com/nightlybuildsco/combell-cli-releases/releases/download/v1.0.0-beta1/combell-cli_1.0.0-beta1_linux_amd64.tar.gz"
+      sha256 "1018b99c3006df0078bf747906364bd915c131ba2a6e1ee670a43bda4bf98a94"
       define_method(:install) do
         bin.install "combell-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nightlybuildsco/combell-cli-releases/releases/download/v1-beta1/combell-cli_1-beta1_linux_arm64.tar.gz"
-      sha256 "4372096158df204f825e8c3570cb39bcdb4d3f680d40b711938c5b86f0906464"
+      url "https://github.com/nightlybuildsco/combell-cli-releases/releases/download/v1.0.0-beta1/combell-cli_1.0.0-beta1_linux_arm64.tar.gz"
+      sha256 "16a746e3711b85b0041e7f0b38b05f78d088f324dc18ed48bba3085a301913e8"
       define_method(:install) do
         bin.install "combell-cli"
       end
